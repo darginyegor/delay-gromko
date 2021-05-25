@@ -6,6 +6,9 @@ html, body {
     padding: 0;
     margin: 0;
     --color-bg: #F2F2F2;
+    --color-dark: #000000;
+    --color-accent: #EB4736;
+    --color-secondary: #F1A53F;
     background-color: var(--color-bg);
 }
 
@@ -33,12 +36,45 @@ html, body {
     }
 }
 
+.dg-h2 {
+    font-size: 32px;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    margin-top: 0;
+    font-weight: 400;
+    border-bottom: 1px solid;
+}
+
 .dg-p {
     font-weight: 400;
     font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.dg-button {
+    cursor: pointer;
+    padding: 12px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--color-dark);
+    color: var(--color-bg);
+    border: none;
+    box-shadow: -4px -4px 0 var(--color-accent);
+    /* border-top: 4px solid var(--color-accent);
+    border-left: 4px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-secondary);
+    border-right: 2px solid var(--color-secondary); */
 }
 
 /* Structure */
+
+.dg-content {
+    max-width: 920px;
+    width: 100%;
+    margin: auto;
+}
 
 .dg-section {
     padding: 48px;
@@ -60,10 +96,10 @@ html, body {
     max-width: 480px;
     height: auto;
     animation: logo-glitch 10s ease-out infinite;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
 .dg-top-text {
     text-align: center;
-    max-width: 60%;
+    /* max-width: 60%; */
 }
