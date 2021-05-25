@@ -64,7 +64,6 @@ html, body {
     background-color: var(--color-accent);
     color: var(--color-bg);
     border-right: 4px solid var(--color-bg);
-    /* border-bottom: 1px solid var(--color-bg); */
     box-shadow: 1.5px 1.5px 0 var(--color-dark);
 }
 
@@ -136,6 +135,8 @@ html, body {
 
 .dg-form-link {
     margin-top: 32px;
+    margin-bottom: 24px;
+    display: inline-block;
 }
 
 /* Adaptivity */
