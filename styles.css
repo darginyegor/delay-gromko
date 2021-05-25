@@ -6,7 +6,7 @@ html, body {
     padding: 0;
     margin: 0;
     --color-bg: #F2F2F2;
-    --color-dark: #000000;
+    --color-dark: #1A1B1F;
     --color-accent: #EB4736;
     --color-secondary: #F1A53F;
     background-color: var(--color-bg);
@@ -36,6 +36,18 @@ html, body {
     }
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+}
+
 .dg-h2 {
     font-size: 32px;
     padding-bottom: 8px;
@@ -43,6 +55,7 @@ html, body {
     margin-top: 0;
     font-weight: 400;
     border-bottom: 1px solid;
+    color: var(--color-dark);
 }
 
 .dg-p {
@@ -50,6 +63,8 @@ html, body {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 24px;
+    line-height: 22px;
+    color: var(--color-dark);
 }
 
 .dg-button {
@@ -58,14 +73,15 @@ html, body {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    background-color: var(--color-dark);
+    background-color: var(--color-accent);
     color: var(--color-bg);
-    border: none;
-    box-shadow: -4px -4px 0 var(--color-accent);
-    /* border-top: 4px solid var(--color-accent);
-    border-left: 4px solid var(--color-accent);
-    border-bottom: 2px solid var(--color-secondary);
-    border-right: 2px solid var(--color-secondary); */
+    border-right: 4px solid var(--color-bg);
+    /* border-bottom: 1px solid var(--color-bg); */
+    box-shadow: 1.5px 1.5px 0 var(--color-dark);
+}
+
+.dg-button:hover {
+    background-color: var(--color-dark);
 }
 
 /* Structure */
@@ -81,6 +97,43 @@ html, body {
     box-sizing: border-box;
 }
 
+/* Steps */
+
+.dg-step {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.dg-step__index {
+    width: 64px;
+    flex-shrink: 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    text-shadow: 2px 0px 0 var(--color-bg), 4px 1px 0 var(--color-accent);
+}
+
+/* Scroll Indicator */
+
+.dg-scroll-indicator {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dg-scroll-indicator__chevron {
+    margin-bottom: -8px;
+    animation: fade 4s infinite;
+    opacity: 0;
+}
+
+.dg-scroll-indicator__chevron--second {
+    animation-delay: .05s;
+}
+
+.dg-scroll-indicator__chevron--third {
+    animation-delay: .1s;
+}
 
 /* Top section */
 
@@ -93,10 +146,11 @@ html, body {
 }
 
 .dg-logo {
-    max-width: 480px;
+    max-width: 512px;
     height: auto;
     animation: logo-glitch 10s ease-out infinite;
     margin-bottom: 64px;
+    margin-top: auto;
 }
 
 .dg-top-text {
