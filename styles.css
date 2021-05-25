@@ -17,34 +17,22 @@ html, body {
 }
 
 @keyframes logo-glitch {
-    98% {
+    96% {
         transform: none;
         filter: none;
     }
-    98.5% {
+    97% {
         transform: translate(12px, 6px) scale(1.0075);
     }
-    99% {
+    98% {
         transform: translate(-6px, -12px) scale(0.995);
     }
-    99.5% {
+    99% {
         transform: translate(6px, 0) scale(1.05);
         filter: blur(6px);
     }
     100% {
         transform: translate(-12px, 0);
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 0;
     }
 }
 
@@ -121,22 +109,6 @@ html, body {
 
 .dg-scroll-indicator {
     margin-top: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.dg-scroll-indicator__chevron {
-    margin-bottom: -8px;
-    animation: fade 4s infinite;
-    opacity: 0;
-}
-
-.dg-scroll-indicator__chevron--second {
-    animation-delay: .05s;
-}
-
-.dg-scroll-indicator__chevron--third {
-    animation-delay: .1s;
 }
 
 /* Top section */
@@ -150,7 +122,7 @@ html, body {
 }
 
 .dg-logo {
-    width: 512px;
+    width: 640px;
     height: auto;
     max-width: 100%;
     animation: logo-glitch 5s ease-out infinite;
@@ -160,7 +132,10 @@ html, body {
 
 .dg-top-text {
     text-align: center;
-    /* max-width: 60%; */
+}
+
+.dg-form-link {
+    margin-top: 32px;
 }
 
 /* Adaptivity */
