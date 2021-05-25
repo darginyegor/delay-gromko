@@ -80,6 +80,10 @@ html, body {
     box-shadow: 1.5px 1.5px 0 var(--color-dark);
 }
 
+.dg-link {
+    color: var(--color-accent);
+}
+
 .dg-button:hover {
     background-color: var(--color-dark);
 }
