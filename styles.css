@@ -139,6 +139,11 @@ html, body {
     display: inline-block;
 }
 
+.dg-partner-logo {
+    max-height: 48px;
+    width: auto;
+}
+
 /* Adaptivity */
 
 @media (max-width: 430px) {
